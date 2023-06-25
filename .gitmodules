@@ -1,0 +1,9 @@
+[submodule "worker"]
+	path = worker
+	url = https://github.com/MarkRivera/video-processor-go-worker.git
+[submodule "client"]
+	path = client
+	url = https://github.com/MarkRivera/video-processor-client
+[submodule "server"]
+	path = server
+	url = https://github.com/MarkRivera/veep.git
