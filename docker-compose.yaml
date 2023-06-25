@@ -1,10 +1,15 @@
 version: "3.8"
 
 services:
-  api:
+  client:
+    build: ./client
+    ports:
+      - 8080:8080
+
+  server:
     build: ./server
     ports:
-      - 5000:5000
+      - 3000:3000
     depends_on:
       - rabbitmq
 
@@ -14,16 +19,16 @@ services:
       - 5672:5672
       - 15672:15672
     volumes:
-      - rabbitmq/data:/var/lib/rabbitmq
-      - rabbitmq/log:/var/log/rabbitmq
+      - rabbitmq:/var/lib/rabbitmq
+      - rabbitmq:/var/log/rabbitmq
     
   worker:
-    build: ./video-worker
+    build: ./worker
     volumes:
-      - video-worker:/app
+      - worker:/app
     depends_on:
       - rabbitmq
   
 volumes:
-  video-worker:
+  worker:
   rabbitmq:
