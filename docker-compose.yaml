@@ -12,6 +12,8 @@ services:
       - 3000:3000
     depends_on:
       - rabbitmq
+    command: >
+      sh -c "until curl -s rabbitmq:15672 >/dev/null; do sleep 1; done && npm run start"
 
   rabbitmq:
     image: rabbitmq:management
@@ -21,14 +23,16 @@ services:
     volumes:
       - rabbitmq:/var/lib/rabbitmq
       - rabbitmq:/var/log/rabbitmq
-    
+
   worker:
     build: ./worker
     volumes:
       - worker:/app
     depends_on:
       - rabbitmq
-  
+    command: >
+      sh -c "until curl -s rabbitmq:15672 >/dev/null; do sleep 1; done && go run ."
+
 volumes:
   worker:
   rabbitmq:
