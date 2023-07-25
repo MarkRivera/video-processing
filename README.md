@@ -21,7 +21,7 @@ To solve the identified issues, the following decisions have been made:
   
   3. Resumable Uploads: The architecture is being updated to support resumable uploads. This means allowing users to restart an interrupted upload from where it failed, rather than starting the entire upload process again. This feature enhances user experience and reduces frustration.
 
-### Result
+### Results
 The proposed architecture addresses the major issues related to video uploads on the conventional REST-Based server:
 
   1. Users can now resume uploads from the point of interruption, saving time and effort in case of failures.
@@ -31,6 +31,9 @@ The proposed architecture addresses the major issues related to video uploads on
   3. By separating video processing from the web servers, the servers can continue serving other requests even while processing video uploads, reducing service disruptions and enhancing scalability.
 
 ![image](https://github.com/MarkRivera/video-processing/assets/6520868/62677026-d995-4330-aa1f-81245fe2e3b2)
+
+# Docker
+This application is containerized using Docker.
 
 # Major Components
 There are 4+ major components to this application:
@@ -42,4 +45,8 @@ There are 4+ major components to this application:
 ## Client
   ### **Tech Stack**
   
-  TypeScript, React, Vite, Docker, Tailwind, Jest
+  TypeScript, Solid.js, Vite, Docker, Tailwind, Jest
+
+  ### **Dependencies**
+  
+  axios, solid.js, uuid, tailwind
