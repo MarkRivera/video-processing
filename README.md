@@ -17,3 +17,16 @@ How we solve this issue will determines how our architecture will look like. The
 
 With this in mind I've designed this architecture
 ![image](https://github.com/MarkRivera/video-processing/assets/6520868/62677026-d995-4330-aa1f-81245fe2e3b2)
+
+# Major Components
+There are 4+ major components to this application:
+  1. Client Application
+  2. Web Servers
+  3. RabbitMQ Task Queue
+  4. Golang Workers
+
+
+## Client
+  ### **Tech Stack**
+  
+  TypeScript, React, Vite, Docker, Tailwind, Jest
