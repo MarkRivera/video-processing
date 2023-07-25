@@ -1,7 +1,7 @@
 # The Video Processing Project
 
 # What is it?
-This project was born from inspiration from seeing how quickly YouTube processes a user uploaded video. In order to mimic some of that functionality this project was born.
+This project was born from inspiration from seeing how quickly YouTube processes a user uploaded video.
 
 ### What problems are we looking at?
 When a user attempted to upload a video to a conventional REST-Based server, they are met with a few major problems:
